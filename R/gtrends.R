@@ -309,10 +309,10 @@ gtrends.default <- function(query = "",
   countries[, 2] <- as.character(countries[, 2])
   countries[which(countries[, "country"] == "Namibia"), "code"] <- "NA"
   
-  if (geo != "" && !all(geo %in% countries[, "code"]) && !all(geo %in% countries[, "subcode"])) {
-    stop("Country code not valid. Please use 'data(countries)' to retreive valid codes.",
-         call. = FALSE)
-  }
+  # if (geo != "" && !all(geo %in% countries[, "code"]) && !all(geo %in% countries[, "subcode"])) {
+  #   stop("Country code not valid. Please use 'data(countries)' to retreive valid codes.",
+  #        call. = FALSE)
+  # }
   
   geo <- paste(geo, sep = "", collapse = ", ")
   #geo <- URLencode(geo, reserved = TRUE)
